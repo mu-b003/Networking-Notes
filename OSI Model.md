@@ -1,5 +1,7 @@
 The OSI model(Open Systems Interconnection) is a seven-layer framework that stipulates that any device wishing to communicate over a network must pass through these seven layers. The transmitting device must go through seven stages, and the receiving device must also go through the same seven stages, but in reverse.
 ![[osi-model-layers-explanation.webp]]
+
+
 7-Application Layer
 The application layer determines the appropriate protocol for the action you are performing and provides that protocol. For example, when you open your browser and enter a URL—such as "google.com"—the "https" protocol is automatically added; this is the protocol used for web browsing.
 
@@ -7,12 +9,14 @@ And when you want to download a file, it uses the FTP protocol, which stands for
 
 The same applies if you want to send an email; this uses the SMTP (Simple Mail Transfer Protocol) protocol. There are also many other protocols that operate at the application layer.
 
+
 6-Presentation layer
 The presentation layer takes data arriving from the application layer—in the form of characters and numbers—and converts it into binary (zeros and ones) so that the device can understand and process it; this process is called translation. Subsequently, it reduces the number of these binary digits—a process known as data compression—which facilitates the transmission process.
 
 This is what we observe when we upload an image to Facebook or WhatsApp: its file size decreases due to what is known as data compression.
 
 The presentation layer also encrypts data before transmission; upon receipt, the receiving device decrypts it using the SSL(Secure Sockets Layer) protocol. 
+
 
 5-Session layer
 The session layer performs four functions
@@ -31,6 +35,8 @@ After entering your username and password and accessing the server, the authoriz
 
 D-Session Management
 One of the key functions of the session layer is session management. For instance, when you access Facebook while offline, you can still see the images and posts that were present during your last online session. This is because the session layer captures the data that was temporarily displayed on the site and stores it; when you access Facebook again, it retrieves this stored data, allowing you to view it even without an internet connection.
+
+
 
 4-Transport Layer
 This layer is responsible for 
@@ -57,6 +63,8 @@ Connectionless transmission: This protocol is not highly precise in its data del
 
 For example, when we are on a live stream (like Zoom Live), we need the data to arrive in real time, but high precision is not essential; in this case, we use the UDP protocol.
 
+
+
 3-Network Layer
 The network layer does two things:
 
@@ -70,6 +78,8 @@ Thus, the packet consists of the sender's IP address, the receiver's IP address,
 B-Routing
 The second function performed by the network layer is routing; in short, routing is the process of selecting the best path for data to travel from the sender to the receiver.
 
+
+
 2-Data Link Layer
 We have a second type of addressing, known as physical addressing, which takes place at the data link layer using MAC (Media Access Control)addresses.
 
@@ -77,6 +87,8 @@ The data link layer receives data packets from the network layer and adds the MA
 
 -MAC Address
 A MAC address is a physical address assigned to a network interface card by its manufacturer. It consists of hexadecimal digits (numbers and letters) for example, 11-S0-G0-78-M8-88 where each digit represents four bits, making a MAC address 48 bits long in total.
+
+
 
 
 1-Physical Layer
