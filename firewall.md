@@ -1,3 +1,5 @@
+Firewall
+
 A firewall is a security system used to monitor and control network traffic entering and leaving a network based on a set of security rules.
 In simpler terms: A firewall works like a guard at the entrance of a building, allowing authorized individuals to enterand preventing unauthorized individuals from entering. Similarly, a firewall inspects network traffic and decides whether to allow or block it.
 
