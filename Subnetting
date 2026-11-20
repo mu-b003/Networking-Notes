@@ -1,4 +1,4 @@
-# Subnetting
+Subnetting
 
 This means dividing a large network into smaller networks called subnets. In simpler terms:
 
@@ -13,7 +13,7 @@ Instead of putting all the computers on one network, you can divide the network 
 
 ---
 
-## Why do we use subnetting?
+Why do we use subnetting?
 
 1. **Network Organization:** Organizing and grouping devices.
 2. **Security:** Helping to isolate networks and control communication between them.
@@ -22,7 +22,7 @@ Instead of putting all the computers on one network, you can divide the network 
 
 ---
 
-## Before we understand Subnetting, what is an IP Address?
+Before we understand Subnetting, what is an IP Address?
 
 Every device connected to an IP network needs an IP address to communicate with other devices.
 
@@ -39,7 +39,7 @@ This is an IPv4 address. IPv4 consists of 32 bits divided into four parts called
 Total = 32 Bits
 ```
 
-### In this example:
+In this example:
 
 - `192.168.1` represents the network segment.
 - `10` represents part of the device.
