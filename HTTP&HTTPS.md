@@ -10,16 +10,6 @@ It is a protocol used to transfer data and information between a user's browser 
 4. The server sends an HTTP response containing the requested information.
 5. The browser displays the website page to you.
 
-       WEB BROWSER                         WEB SERVER
-   ┌──────────────────┐               ┌──────────────────┐
-   │                  │               │                  │
-   │   Browser        │ ────────────► │   Server         │
-   │                  │ HTTP Request  │                  │
-   │                  │               │                  │
-   │                  │ ◄──────────── │                  │
-   │                  │ HTTP Response │                  │
-   │                  │ HTML, CSS, JS │                  │
-   └──────────────────┘               └──────────────────┘
 
 **Important note:** HTTP does not encrypt data while it is in transmission, which means that the data can be readable if someone manages to intercept the connection.
 
@@ -118,23 +108,4 @@ TLS offers three main benefits:
 2. **Authentication:** Helps the browser verify the server's identity using a digital certificate.
 3. **Integrity:** Helps detect any unauthorized modifications to data while it is in transit.
 
-       WEB BROWSER
-  ┌──────────────────────────────────────────────┐
-  │  🌐  Example Domain                     ×   │
-  ├──────────────────────────────────────────────┤
-  │                                              │
-  │  ↻    🏠    ┌─────┐  https://example.com     │
-  │             │  🔒 │                          │
-  │             └─────┘                          │
-  ├──────────────────────────────────────────────┤
-  │                                              │
-  │       CONNECTION IS SECURE                   │
-  │                                              │
-  │  Your information is private when it is      │
-  │  sent to this site.                          │
-  │                                              │
-  │  ✓ Passwords                                 │
-  │  ✓ Credit card numbers                       │
-  │  ✓ Personal information                      │
-  │                                              │
-  └──────────────────────────────────────────────┘
+
