@@ -11,15 +11,13 @@ It is a protocol used to transfer data and information between a user's browser 
 5. The browser displays the website page to you.
 
        WEB BROWSER                                           WEB SERVER
-   ┌──────────────────┐                                   ┌──────────────────┐
-   │                  │                                   │                  │
-   │   Browser        │          ────────────►            │   Server         │
-   │                  │           HTTP Request            │                  │
-   │                  │                                   │                  │
-   │                  │          ◄────────────            │                  │
-   │                  │           HTTP Response           │                  │
-   │                  │           HTML, CSS, JS           │                  │
-   └──────────────────┘                                   └──────────────────┘
+   
+       Browser                     ────────────►                Server         
+                                  HTTP Request            
+                                   ◄────────────          
+                                    HTTP Response         
+                                    HTML, CSS, JS         
+                                      
 
 
 
