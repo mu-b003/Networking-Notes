@@ -20,6 +20,14 @@ It is a protocol used to transfer data and information between a user's browser 
    │                  │           HTTP Response           │                  │
    │                  │           HTML, CSS, JS           │                  │
    └──────────────────┘                                   └──────────────────┘
+
+
+
+
+
+
+
+   
 **Important note:** HTTP does not encrypt data while it is in transmission, which means that the data can be readable if someone manages to intercept the connection.
 
 ## 2. HTTPS?
