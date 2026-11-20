@@ -10,7 +10,16 @@ It is a protocol used to transfer data and information between a user's browser 
 4. The server sends an HTTP response containing the requested information.
 5. The browser displays the website page to you.
 
-`![[Pasted image 20261120135441.png]]`
+       WEB BROWSER                         WEB SERVER
+   ┌──────────────────┐               ┌──────────────────┐
+   │                  │               │                  │
+   │   Browser        │ ────────────► │   Server         │
+   │                  │ HTTP Request  │                  │
+   │                  │               │                  │
+   │                  │ ◄──────────── │                  │
+   │                  │ HTTP Response │                  │
+   │                  │ HTML, CSS, JS │                  │
+   └──────────────────┘               └──────────────────┘
 
 **Important note:** HTTP does not encrypt data while it is in transmission, which means that the data can be readable if someone manages to intercept the connection.
 
@@ -28,7 +37,64 @@ In simpler terms: HTTPS performs the same function as HTTP, but it protects data
 4. Connection keys are generated to encrypt the data.
 5. The browser and server begin exchanging requests and responses in encrypted form.
 
-`![[Pasted image 20261120143749.png]]`
+             TLS HANDSHAKE PROCESS
+          Establishing a Secure Connection
+
+       CLIENT (Browser)              SERVER (Website)
+       ┌───────────────┐              ┌───────────────┐
+       │               │              │               │
+       │    BROWSER    │              │    SERVER     │
+       │               │              │               │
+       └───────┬───────┘              └───────┬───────┘
+               │                              │
+               │  1. CLIENT HELLO             │
+               │  (Supported Versions &       │
+               │   Cipher Suites)             │
+               │ ────────────────────────────>│
+               │                              │
+               │  2. SERVER HELLO             │
+               │     + SERVER CERTIFICATE     │
+               │     (Public Key)             │
+               │<────────────────────────────│
+               │                              │
+               │  3. CLIENT VERIFIES          │
+               │     SERVER CERTIFICATE       │
+               │     (Certificate Authority)  │
+               │                              │
+               │  4. KEY EXCHANGE             │
+               │     (Establish Shared Secret)│
+               │ ────────────────────────────>│
+               │                              │
+               │                              │
+               │  5. BOTH GENERATE            │
+               │     SESSION KEYS             │
+               │                              │
+               │  ┌────────────────────────┐  │
+               │  │   SYMMETRIC KEY        │  │
+               │  │      🔑 *******        │  │
+               │  └────────────────────────┘  │
+               │                              │
+               │  6. SECURE CONNECTION        │
+               │<═══════════════════════════>│
+               │                              │
+               │    ENCRYPTED DATA            │
+               │    🔒 🔒 🔒 🔒 🔒             │
+               │                              │
+       ┌───────┴───────┐              ┌───────┴───────┐
+       │    CLIENT     │              │    SERVER     │
+       └───────────────┘              └───────────────┘
+
+
+       ASYMMETRIC CRYPTOGRAPHY
+                 │
+                 ▼
+       ESTABLISH SHARED SECRET
+                 │
+                 ▼
+       SYMMETRIC ENCRYPTION
+                 │
+                 ▼
+       FAST & SECURE COMMUNICATION
 
 This helps to protect information such as passwords and login data as they travel across the network.
 
@@ -52,4 +118,23 @@ TLS offers three main benefits:
 2. **Authentication:** Helps the browser verify the server's identity using a digital certificate.
 3. **Integrity:** Helps detect any unauthorized modifications to data while it is in transit.
 
-`![[Pasted image 20261120150115.png]]`
+       WEB BROWSER
+  ┌──────────────────────────────────────────────┐
+  │  🌐  Example Domain                     ×   │
+  ├──────────────────────────────────────────────┤
+  │                                              │
+  │  ↻    🏠    ┌─────┐  https://example.com     │
+  │             │  🔒 │                          │
+  │             └─────┘                          │
+  ├──────────────────────────────────────────────┤
+  │                                              │
+  │       CONNECTION IS SECURE                   │
+  │                                              │
+  │  Your information is private when it is      │
+  │  sent to this site.                          │
+  │                                              │
+  │  ✓ Passwords                                 │
+  │  ✓ Credit card numbers                       │
+  │  ✓ Personal information                      │
+  │                                              │
+  └──────────────────────────────────────────────┘
